@@ -20,6 +20,13 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+const createRefreshToken = async (user) => {
+  const refreshToken = getRefreshToken();
+  const storedRefreshToken = new Token({ refreshToken, user: user._id });
+  await storedRefreshToken.save();
+  return refreshToken;
+};
+
 const generateToken = user => {
  
     const token = jsonwebtoken.sign({

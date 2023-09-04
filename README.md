@@ -1,5 +1,7 @@
 # express-jwt-authentication
 
+D'après l'article https://blog.logrocket.com/react-native-jwt-authentication-using-axios-interceptors/
+
 Express JWT authentication example // marche avec frontend react-native-jwt-example
 
 pour installer le server :
